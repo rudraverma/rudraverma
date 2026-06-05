@@ -1,100 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
   <defs>
-    <!-- Fire gradient: outer to inner -->
-    <radialGradient id="fireGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"   stop-color="#ff6a00" stop-opacity="0"/>
-      <stop offset="60%"  stop-color="#ff4500" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#ff2200" stop-opacity="0.9"/>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#1a2a4a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0a1220" stop-opacity="1"/>
     </radialGradient>
-
-    <!-- Ring gradients -->
-    <linearGradient id="ring1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   stop-color="#ff6a00"/>
-      <stop offset="25%"  stop-color="#ffcc00"/>
-      <stop offset="50%"  stop-color="#ff4500"/>
-      <stop offset="75%"  stop-color="#ff8800"/>
-      <stop offset="100%" stop-color="#ff6a00"/>
-    </linearGradient>
-
-    <linearGradient id="ring2" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   stop-color="#0066cc"/>
-      <stop offset="50%"  stop-color="#00aaff"/>
-      <stop offset="100%" stop-color="#0044aa"/>
-    </linearGradient>
-
-    <linearGradient id="ring3" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#ff4400"/>
-      <stop offset="50%"  stop-color="#ffaa00"/>
-      <stop offset="100%" stop-color="#ff4400"/>
-    </linearGradient>
-
-    <!-- Clip for circular logo -->
-    <clipPath id="circle-clip">
-      <circle cx="110" cy="110" r="74"/>
+    <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#d4890a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0a1220" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="logoClip">
+      <circle cx="120" cy="120" r="68"/>
     </clipPath>
-
     <style>
-      .spin-cw  { animation: spin-cw  4s linear infinite; transform-origin: 110px 110px; }
-      .spin-ccw { animation: spin-ccw 6s linear infinite; transform-origin: 110px 110px; }
-      .spin-slow { animation: spin-cw 10s linear infinite; transform-origin: 110px 110px; }
-      .pulse    { animation: pulse 2s ease-in-out infinite; transform-origin: 110px 110px; }
-      .glow     { animation: glow 2s ease-in-out infinite; }
+      .r1 { animation: spin  18s linear infinite; transform-origin: 120px 120px; }
+      .r2 { animation: rspin 12s linear infinite; transform-origin: 120px 120px; }
+      .r3 { animation: spin  28s linear infinite; transform-origin: 120px 120px; }
+      .r4 { animation: rspin 20s linear infinite; transform-origin: 120px 120px; }
+      .pulse { animation: pulse 3s ease-in-out infinite; transform-origin: 120px 120px; }
+      .scan  { animation: scan  4s ease-in-out infinite; }
 
-      @keyframes spin-cw  { to { transform: rotate(360deg);  } }
-      @keyframes spin-ccw { to { transform: rotate(-360deg); } }
+      @keyframes spin  { to { transform: rotate( 360deg); } }
+      @keyframes rspin { to { transform: rotate(-360deg); } }
       @keyframes pulse {
-        0%,100% { transform: scale(1);    opacity: 0.8; }
-        50%     { transform: scale(1.05); opacity: 1;   }
+        0%,100% { opacity: 0.55; transform: scale(1);    }
+        50%     { opacity: 0.90; transform: scale(1.012); }
       }
-      @keyframes glow {
-        0%,100% { opacity: 0.6; }
-        50%     { opacity: 1.0; }
+      @keyframes scan {
+        0%,100% { opacity: 0.3; }
+        50%     { opacity: 0.8; }
       }
     </style>
   </defs>
 
-  <!-- Outer glow background -->
-  <circle cx="110" cy="110" r="108" fill="#0d1117"/>
-  <circle cx="110" cy="110" r="104" fill="url(#fireGlow)" class="glow"/>
+  <!-- Background -->
+  <circle cx="120" cy="120" r="120" fill="url(#bgGlow)"/>
+  <circle cx="120" cy="120" r="110" fill="url(#innerGlow)"/>
 
-  <!-- Rotating fire ring (outermost) -->
-  <g class="spin-cw">
-    <circle cx="110" cy="110" r="100" fill="none" stroke="url(#ring1)" stroke-width="3" stroke-dasharray="18 8" opacity="0.9"/>
+  <!-- ── RING 1 — outermost, fine dashes, dark amber ── -->
+  <g class="r1">
+    <circle cx="120" cy="120" r="112"
+      fill="none" stroke="#8b5e0a" stroke-width="1"
+      stroke-dasharray="2 6"/>
   </g>
 
-  <!-- Rotating blue ring -->
-  <g class="spin-ccw">
-    <circle cx="110" cy="110" r="94" fill="none" stroke="url(#ring2)" stroke-width="2" stroke-dasharray="12 6" opacity="0.7"/>
+  <!-- ── RING 2 — main outer ring, bold dashes, gold ── -->
+  <g class="r2">
+    <circle cx="120" cy="120" r="106"
+      fill="none" stroke="#c47b00" stroke-width="2.5"
+      stroke-dasharray="14 5"/>
+    <!-- tick marks at cardinal/intercardinal points -->
+    <line x1="120" y1="14"  x2="120" y2="5"  stroke="#f5a623" stroke-width="2"/>
+    <line x1="120" y1="226" x2="120" y2="235" stroke="#f5a623" stroke-width="2"/>
+    <line x1="14"  y1="120" x2="5"  y2="120" stroke="#f5a623" stroke-width="2"/>
+    <line x1="226" y1="120" x2="235" y2="120" stroke="#f5a623" stroke-width="2"/>
+    <line x1="45"  y1="45"  x2="39"  y2="39"  stroke="#d4890a" stroke-width="1.5"/>
+    <line x1="195" y1="45"  x2="201" y2="39"  stroke="#d4890a" stroke-width="1.5"/>
+    <line x1="45"  y1="195" x2="39"  y2="201" stroke="#d4890a" stroke-width="1.5"/>
+    <line x1="195" y1="195" x2="201" y2="201" stroke="#d4890a" stroke-width="1.5"/>
   </g>
 
-  <!-- Fire dots ring (slow spin) -->
-  <g class="spin-slow">
-    <circle cx="110" cy="10"  r="3.5" fill="#ff6a00" opacity="0.9"/>
-    <circle cx="110" cy="210" r="3.5" fill="#ff4500" opacity="0.9"/>
-    <circle cx="10"  cy="110" r="3.5" fill="#ffaa00" opacity="0.9"/>
-    <circle cx="210" cy="110" r="3.5" fill="#ff6a00" opacity="0.9"/>
-    <circle cx="33"  cy="33"  r="2.5" fill="#ff8800" opacity="0.7"/>
-    <circle cx="187" cy="33"  r="2.5" fill="#ff8800" opacity="0.7"/>
-    <circle cx="33"  cy="187" r="2.5" fill="#ffcc00" opacity="0.7"/>
-    <circle cx="187" cy="187" r="2.5" fill="#ffcc00" opacity="0.7"/>
+  <!-- ── RING 3 — mid ring, dotted amber ── -->
+  <g class="r3">
+    <circle cx="120" cy="120" r="96"
+      fill="none" stroke="#a06810" stroke-width="1.5"
+      stroke-dasharray="3 7"/>
   </g>
 
-  <!-- Inner ring (fire) -->
-  <g class="spin-ccw">
-    <circle cx="110" cy="110" r="88" fill="none" stroke="url(#ring3)" stroke-width="3.5" stroke-dasharray="6 4" opacity="0.85"/>
+  <!-- ── RING 4 — inner ring, segmented, bright gold ── -->
+  <g class="r4">
+    <circle cx="120" cy="120" r="87"
+      fill="none" stroke="#d4890a" stroke-width="2"
+      stroke-dasharray="10 4"/>
+    <!-- small diamonds at 8 points -->
+    <circle cx="120" cy="33"  r="2.5" fill="#f5a623"/>
+    <circle cx="120" cy="207" r="2.5" fill="#f5a623"/>
+    <circle cx="33"  cy="120" r="2.5" fill="#f5a623"/>
+    <circle cx="207" cy="120" r="2.5" fill="#f5a623"/>
+    <circle cx="58"  cy="58"  r="2"   fill="#d4890a"/>
+    <circle cx="182" cy="58"  r="2"   fill="#d4890a"/>
+    <circle cx="58"  cy="182" r="2"   fill="#d4890a"/>
+    <circle cx="182" cy="182" r="2"   fill="#d4890a"/>
   </g>
 
-  <!-- Dark background circle for logo -->
-  <circle cx="110" cy="110" r="79" fill="#0d1117"/>
-  <circle cx="110" cy="110" r="77" fill="#0a0f1a"/>
+  <!-- ── RING 5 — innermost ring, fine, pulsing ── -->
+  <g class="pulse">
+    <circle cx="120" cy="120" r="77"
+      fill="none" stroke="#f5a623" stroke-width="1.2"
+      stroke-dasharray="4 3" opacity="0.7"/>
+  </g>
 
-  <!-- Logo image -->
-  <image href="https://media.cyberhawkthreatintel.com/general/1771234479938-y9566.png"
-         x="36" y="36" width="148" height="148"
-         clip-path="url(#circle-clip)"
+  <!-- ── Logo background plate ── -->
+  <circle cx="120" cy="120" r="72" fill="#0a1220"/>
+  <circle cx="120" cy="120" r="70" fill="#0d1628"/>
+
+  <!-- ── CyberHawk Logo ── -->
+  <image href="./cyberhawk-logo.png"
+         x="50" y="50" width="140" height="140"
+         clip-path="url(#logoClip)"
          preserveAspectRatio="xMidYMid meet"/>
 
-  <!-- Pulsing inner glow overlay -->
-  <circle cx="110" cy="110" r="77" fill="none" stroke="#ff6a00" stroke-width="1.5" class="pulse" opacity="0.5"/>
-  <circle cx="110" cy="110" r="74" fill="none" stroke="#0066cc" stroke-width="1"   class="glow"  opacity="0.4"/>
+  <!-- ── Subtle inner glow rim ── -->
+  <circle cx="120" cy="120" r="70"
+    fill="none" stroke="#c47b00" stroke-width="1.5"
+    opacity="0.5" class="scan"/>
 </svg>
