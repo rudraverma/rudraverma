@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 472" width="800" height="472">
+  <defs>
+    <style>
+      .mono { font-family: 'Courier New', Courier, monospace; font-size: 13px; }
+      .l0  { animation: in .01s  0.3s both; }
+      .l1  { animation: in .01s  0.9s both; }
+      .l2  { animation: in .01s  1.6s both; }
+      .l3  { animation: in .01s  2.0s both; }
+      .l4  { animation: in .01s  2.4s both; }
+      .l5  { animation: in .01s  2.8s both; }
+      .l6  { animation: in .01s  3.2s both; }
+      .l7  { animation: in .01s  4.0s both; }
+      .l8  { animation: in .01s  4.5s both; }
+      .l9  { animation: in .01s  5.2s both; }
+      .l10 { animation: in .01s  5.6s both; }
+      .l11 { animation: in .01s  6.0s both; }
+      .l12 { animation: in .01s  6.4s both; }
+      .l13 { animation: in .01s  7.2s both; }
+      .l14 { animation: in .01s  7.7s both; }
+      .l15 { animation: in .01s  8.3s both; }
+      .l16 { animation: in .01s  8.7s both; }
+      .l17 { animation: in .01s  9.1s both; }
+      .l18 { animation: in .01s  9.8s both; }
+      .l19 { animation: in .01s 10.1s both; }
+      .cursor { animation: blink 1s 10.2s step-end infinite; }
+      @keyframes in   { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+    </style>
+  </defs>
+
+  <!-- Window chrome -->
+  <rect width="800" height="472" rx="12" fill="#0d1117"/>
+  <rect width="800" height="40" rx="12" fill="#161b22"/>
+  <rect y="30" width="800" height="10" fill="#161b22"/>
+
+  <!-- Traffic lights -->
+  <circle cx="24" cy="20" r="6" fill="#ff5f57"/>
+  <circle cx="44" cy="20" r="6" fill="#febc2e"/>
+  <circle cx="64" cy="20" r="6" fill="#28c840"/>
+
+  <!-- Tab title -->
+  <text x="400" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#7d8590">cyberhawk@threat-intel: ~/operations</text>
+
+  <!-- ── LINE 0 ── prompt -->
+  <text class="l0 mono" x="20" y="68">
+    <tspan fill="#00ff41">┌─[</tspan><tspan fill="#4da6ff">cyberhawk</tspan><tspan fill="#00ff41">@</tspan><tspan fill="#ff8c00">threat-intel</tspan><tspan fill="#00ff41">]─[</tspan><tspan fill="#7ab8f5">~</tspan><tspan fill="#00ff41">]</tspan>
+  </text>
+
+  <!-- ── LINE 1 ── command -->
+  <text class="l1 mono" x="20" y="86">
+    <tspan fill="#00ff41">└─</tspan><tspan fill="#e6edf3">$ </tspan><tspan fill="#7ab8f5">cat </tspan><tspan fill="#ffa500">/etc/rudra.conf</tspan>
+  </text>
+
+  <!-- ── LINE 2-6 ── config block -->
+  <text class="l2 mono" x="44" y="112">
+    <tspan fill="#7ab8f5">  NAME     </tspan><tspan fill="#555">│  </tspan><tspan fill="#e6edf3">Rudra Verma</tspan>
+  </text>
+  <text class="l3 mono" x="44" y="130">
+    <tspan fill="#7ab8f5">  CALLSIGN </tspan><tspan fill="#555">│  </tspan><tspan fill="#ff8c00">CyberHawk</tspan><tspan fill="#e6edf3">  // Senior Cyber Security Architect</tspan>
+  </text>
+  <text class="l4 mono" x="44" y="148">
+    <tspan fill="#7ab8f5">  BASE     </tspan><tspan fill="#555">│  </tspan><tspan fill="#e6edf3">New Zealand </tspan><tspan fill="#7d8590">// 127.0.0.1 everywhere else</tspan>
+  </text>
+  <text class="l5 mono" x="44" y="166">
+    <tspan fill="#7ab8f5">  MISSION  </tspan><tspan fill="#555">│  </tspan><tspan fill="#e6edf3">Build the tools that </tspan><tspan fill="#ff5f57">didn't exist.</tspan><tspan fill="#e6edf3"> Automate what took hours.</tspan>
+  </text>
+  <text class="l6 mono" x="44" y="184">
+    <tspan fill="#7ab8f5">  CODEX    </tspan><tspan fill="#555">│  </tspan><tspan fill="#ffa500">Hack with integrity. Defend with precision.</tspan>
+  </text>
+
+  <!-- ── LINE 7 ── second prompt -->
+  <text class="l7 mono" x="20" y="210">
+    <tspan fill="#00ff41">┌─[</tspan><tspan fill="#4da6ff">cyberhawk</tspan><tspan fill="#00ff41">@</tspan><tspan fill="#ff8c00">threat-intel</tspan><tspan fill="#00ff41">]─[</tspan><tspan fill="#7ab8f5">~</tspan><tspan fill="#00ff41">]</tspan>
+  </text>
+  <text class="l8 mono" x="20" y="228">
+    <tspan fill="#00ff41">└─</tspan><tspan fill="#e6edf3">$ </tspan><tspan fill="#7ab8f5">threat-status </tspan><tspan fill="#ffa500">--live</tspan>
+  </text>
+
+  <!-- ── LINE 9-12 ── live status -->
+  <text class="l9 mono" x="44" y="254">
+    <tspan fill="#00ff41">  [✓] </tspan><tspan fill="#4da6ff">MISP v2.5    </tspan><tspan fill="#555">│ </tspan><tspan fill="#e6edf3">101 events · 272,900 IOCs · 79 feeds caching</tspan>
+  </text>
+  <text class="l10 mono" x="44" y="272">
+    <tspan fill="#00ff41">  [✓] </tspan><tspan fill="#4da6ff">Sentinel     </tspan><tspan fill="#555">│ </tspan><tspan fill="#e6edf3">34 custom KQL detections · real-time correlation</tspan>
+  </text>
+  <text class="l11 mono" x="44" y="290">
+    <tspan fill="#00ff41">  [✓] </tspan><tspan fill="#4da6ff">Claude MCP   </tspan><tspan fill="#555">│ </tspan><tspan fill="#e6edf3">41 tools live · full SIEM/MISP automation</tspan>
+  </text>
+  <text class="l12 mono" x="44" y="308">
+    <tspan fill="#00ff41">  [✓] </tspan><tspan fill="#4da6ff">Red Team     </tspan><tspan fill="#555">│ </tspan><tspan fill="#e6edf3">Kali · Metasploit · Cobalt Strike · Frida</tspan>
+  </text>
+
+  <!-- ── LINE 13 ── third prompt -->
+  <text class="l13 mono" x="20" y="334">
+    <tspan fill="#00ff41">┌─[</tspan><tspan fill="#4da6ff">cyberhawk</tspan><tspan fill="#00ff41">@</tspan><tspan fill="#ff8c00">threat-intel</tspan><tspan fill="#00ff41">]─[</tspan><tspan fill="#7ab8f5">~</tspan><tspan fill="#00ff41">]</tspan>
+  </text>
+  <text class="l14 mono" x="20" y="352">
+    <tspan fill="#00ff41">└─</tspan><tspan fill="#e6edf3">$ </tspan><tspan fill="#7ab8f5">ls </tspan><tspan fill="#ffa500">~/currently-building/</tspan>
+  </text>
+
+  <!-- ── LINE 15-17 ── projects -->
+  <text class="l15 mono" x="44" y="378">
+    <tspan fill="#e6edf3">  misp-mcp/           </tspan><tspan fill="#555">← </tspan><tspan fill="#7d8590">41-tool MCP server · Claude controls MISP live</tspan>
+  </text>
+  <text class="l16 mono" x="44" y="396">
+    <tspan fill="#e6edf3">  misp-admin/         </tspan><tspan fill="#555">← </tspan><tspan fill="#7d8590">Full MISP admin skill for Claude Code</tspan>
+  </text>
+  <text class="l17 mono" x="44" y="414">
+    <tspan fill="#e6edf3">  CyberHawk-Platform  </tspan><tspan fill="#555">← </tspan><tspan fill="#7d8590">AI-powered threat intel · cyberhawkthreatintel.com</tspan>
+  </text>
+
+  <!-- ── LINE 18-19 ── final prompt + cursor -->
+  <text class="l18 mono" x="20" y="440">
+    <tspan fill="#00ff41">┌─[</tspan><tspan fill="#4da6ff">cyberhawk</tspan><tspan fill="#00ff41">@</tspan><tspan fill="#ff8c00">threat-intel</tspan><tspan fill="#00ff41">]─[</tspan><tspan fill="#7ab8f5">~</tspan><tspan fill="#00ff41">]</tspan>
+  </text>
+  <text class="l19 mono" x="20" y="458">
+    <tspan fill="#00ff41">└─</tspan><tspan fill="#e6edf3">$ </tspan><tspan class="cursor" fill="#0066cc">█</tspan>
+  </text>
+</svg>
