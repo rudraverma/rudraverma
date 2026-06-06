@@ -1,0 +1,59 @@
+name: 📸 CyberHawk Site Screenshot
+
+on:
+  schedule:
+    - cron: "0 0 * * *"    # daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install chromium --with-deps
+
+      - name: Screenshot cyberhawkthreatintel.com
+        run: |
+          cat > capture.mjs << 'SCRIPT'
+          import { chromium } from 'playwright';
+
+          const browser = await chromium.launch();
+          const page = await browser.newPage();
+          await page.setViewportSize({ width: 1400, height: 800 });
+
+          try {
+            await page.goto('https://www.cyberhawkthreatintel.com', {
+              waitUntil: 'networkidle',
+              timeout: 30000
+            });
+          } catch {
+            // fallback if networkidle times out
+            await page.waitForTimeout(5000);
+          }
+
+          await page.screenshot({ path: 'site-screenshot.png', fullPage: false });
+          await browser.close();
+          console.log('Screenshot captured.');
+          SCRIPT
+          node capture.mjs
+
+      - name: Commit screenshot
+        run: |
+          git config user.email "rudraverma@live.com"
+          git config user.name "Rudra Verma"
+          git add site-screenshot.png
+          git diff --staged --quiet || git commit -m "update: site screenshot [skip ci]"
+          git push
