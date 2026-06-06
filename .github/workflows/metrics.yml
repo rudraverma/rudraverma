@@ -28,7 +28,6 @@ jobs:
           config_display: large
 
       # ── 2. Languages ──────────────────────────────────────────────────────
-      # Note: indepth removed — it clones all repos and is flaky on free runners
       - name: 🈷️ Languages
         uses: lowlighter/metrics@latest
         continue-on-error: true
@@ -41,8 +40,7 @@ jobs:
           plugin_languages_ignored: >-
             html, css, less, scss, dockerfile, makefile, tex, batchfile, cmake, shell
           plugin_languages_limit: 8
-          plugin_languages_sections: most-used, recently-used
-          plugin_languages_details: bytes-size, percentage
+          plugin_languages_details: percentage
           config_timezone: Pacific/Auckland
 
       # ── 3. Coding Habits & Charts ─────────────────────────────────────────
