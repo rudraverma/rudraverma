@@ -34,22 +34,4 @@
 <img src="./assets/connect.svg" width="100%" alt="Connect with CyberHawk"/>
 </div>
 
----
-
-<div align="center">
-
-## 🖥️ CyberHawk Threat Intel — Live
-
-<a href="https://www.cyberhawkthreatintel.com">
-<img src="site-screenshot.png" width="100%" alt="CyberHawk Threat Intel"/>
-</a>
-
-<br/>
-
-[![Visit](https://img.shields.io/badge/🌐_Visit-cyberhawkthreatintel.com-0066cc?style=for-the-badge&labelColor=000d1f)](https://www.cyberhawkthreatintel.com)
-
-<sub><i>Screenshot auto-refreshed daily</i></sub>
-
-</div>
-
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0066cc,50:001433,100:000000&height=100&section=footer"/>
