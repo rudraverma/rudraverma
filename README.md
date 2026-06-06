@@ -3,14 +3,14 @@
 <img src="./assets/logo-ring.svg" width="200" alt="CyberHawk"/>
 
 <h1>
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=28&duration=3000&pause=1000&color=0066CC&center=true&vCenter=true&width=600&lines=%3E_+RUDRA+VERMA;Senior+Cyber+Security+Architect;CyberHawk+Threat+Intel+%7C+NZ" alt="Typing"/>
+<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=28&duration=3000&pause=1000&color=0066CC&center=true&vCenter=true&width=600&lines=%3E_+RUDRA+VERMA;Senior+Cyber+Security+Architect;CyberHawk+Threat+Intel+%7C" alt="Typing"/>
 </h1>
 
 ![Profile Views](https://komarev.com/ghpvc/?username=rudraverma&label=Profile+Views&color=0066cc&style=flat-square)
 &nbsp;
 [![Website](https://img.shields.io/badge/🦅_CyberHawk-cyberhawkthreatintel.com-0066cc?style=flat-square)](https://www.cyberhawkthreatintel.com)
 &nbsp;
-![NZ](https://img.shields.io/badge/📍_NZ-127.0.0.1_everywhere-003d99?style=flat-square)
+![NZ](https://img.shields.io/badge/📍_127.0.0.1_everywhere-003d99?style=flat-square)
 
 </div>
 
